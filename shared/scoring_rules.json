@@ -1,0 +1,12 @@
+
+{
+  "thresholds": {
+    "LOW": 30,
+    "MEDIUM": 70,
+    "HIGH": 100
+  },
+  "impact_levels": {
+    "CRITICAL": 20,
+    "MODERATE": 10
+  }
+}

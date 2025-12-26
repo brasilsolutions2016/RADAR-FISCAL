@@ -1,0 +1,422 @@
+[
+  {
+    "id": "Q01",
+    "category": "Fiscal",
+    "text": "Sua empresa realiza a conciliação mensal entre notas emitidas e o extrato bancário?",
+    "options": [
+      { "label": "Sim, mensalmente", "weight": 0 },
+      { "label": "Às vezes", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q02",
+    "category": "Fiscal",
+    "text": "Como é feito o armazenamento dos arquivos fiscais (XML, DANFE, relatórios)?",
+    "options": [
+      { "label": "Sistema em nuvem automático", "weight": 0 },
+      { "label": "Pastas locais/E-mail", "weight": 10 },
+      { "label": "Não armazenamos", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q03",
+    "category": "Fiscal",
+    "text": "A empresa possui controle e conferência de retenções (IRRF/INSS/ISS) em notas tomadas?",
+    "options": [
+      { "label": "Não/Não se aplica", "weight": 0 },
+      { "label": "Sim, com controle rigoroso", "weight": 0 },
+      { "label": "Sim, mas sem controle específico", "weight": 20 }
+    ]
+  },
+  {
+    "id": "Q04",
+    "category": "Fiscal",
+    "text": "Quando há divergência entre o extrato bancário e o faturamento, a empresa consegue identificar a origem rapidamente?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Às vezes", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q01", "value": "Às vezes" },
+      { "dependsOn": "Q01", "value": "Não" }
+    ]
+  },
+  {
+    "id": "Q05",
+    "category": "Fiscal",
+    "text": "A empresa faz conferência de NCM/CFOP em notas emitidas para evitar tributação incorreta?",
+    "options": [
+      { "label": "Sim, sempre", "weight": 0 },
+      { "label": "Às vezes", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q02", "value": "Pastas locais/E-mail" }
+    ]
+  },
+  {
+    "id": "Q06",
+    "category": "Fiscal",
+    "text": "A empresa já recebeu notificações/alertas por divergências em obrigações acessórias (ex.: DCTF, EFD, PGDAS)?",
+    "options": [
+      { "label": "Não", "weight": 0 },
+      { "label": "Sim, mas resolvemos rápido", "weight": 10 },
+      { "label": "Sim, e demorou/gerou problema", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q01", "value": "Não" }
+    ]
+  },
+  {
+    "id": "Q07",
+    "category": "Fiscal",
+    "text": "A empresa confere se os impostos retidos por terceiros foram corretamente informados/compensados?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Às vezes", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q03", "value": "Sim, mas sem controle específico" }
+    ]
+  },
+  {
+    "id": "Q08",
+    "category": "Fiscal",
+    "text": "A empresa possui rotina para checar pendências no e-CAC/portal da Receita (CPF/CNPJ) periodicamente?",
+    "options": [
+      { "label": "Sim, mensal/trimestral", "weight": 0 },
+      { "label": "Raramente", "weight": 10 },
+      { "label": "Nunca", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q09",
+    "category": "Fiscal",
+    "text": "A empresa realiza operações com venda para fora do estado ou para o exterior?",
+    "options": [
+      { "label": "Não realiza", "weight": 0 },
+      { "label": "Sim, com assessoria", "weight": 10 },
+      { "label": "Sim, por conta própria", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q10",
+    "category": "Fiscal",
+    "text": "A empresa já teve problemas com substituição tributária (ST), DIFAL ou ICMS em operações interestaduais?",
+    "options": [
+      { "label": "Não", "weight": 0 },
+      { "label": "Sim, mas corrigimos", "weight": 10 },
+      { "label": "Sim, e gerou custo/multa", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q09", "value": "Sim, por conta própria" }
+    ]
+  },
+  {
+    "id": "Q11",
+    "category": "Fiscal",
+    "text": "A empresa possui documentação organizada para comprovar despesas e custos (notas, contratos, recibos)?",
+    "options": [
+      { "label": "Sim, organizada", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q12",
+    "category": "Fiscal",
+    "text": "A empresa controla pró-labore, distribuição de lucros e retiradas dos sócios com registro claro?",
+    "options": [
+      { "label": "Sim, tudo registrado", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q13",
+    "category": "Contábil",
+    "text": "Com que frequência a empresa fecha e revisa a contabilidade (balancete/relatórios)?",
+    "options": [
+      { "label": "Mensal", "weight": 0 },
+      { "label": "Trimestral", "weight": 10 },
+      { "label": "Anual", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q14",
+    "category": "Contábil",
+    "text": "A empresa tem clareza sobre o regime tributário atual e suas obrigações (Simples, Presumido, Real)?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Mais ou menos", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q15",
+    "category": "Contábil",
+    "text": "A empresa revisa periodicamente se o regime tributário escolhido ainda é o mais vantajoso?",
+    "options": [
+      { "label": "Sim, anualmente", "weight": 0 },
+      { "label": "Raramente", "weight": 10 },
+      { "label": "Nunca", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q16",
+    "category": "Contábil",
+    "text": "Os lançamentos contábeis são conciliados com bancos, fornecedores e clientes de forma consistente?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q13", "value": "Mensal" }
+    ]
+  },
+  {
+    "id": "Q17",
+    "category": "Contábil",
+    "text": "A empresa mantém controle de estoque (se aplicável) com conferência periódica?",
+    "options": [
+      { "label": "Não se aplica", "weight": 0 },
+      { "label": "Sim", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q18",
+    "category": "Contábil",
+    "text": "A empresa já teve inconsistências entre estoque físico e estoque contábil/fiscal?",
+    "options": [
+      { "label": "Não", "weight": 0 },
+      { "label": "Sim, pequenas", "weight": 10 },
+      { "label": "Sim, relevantes", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q17", "value": "Sim" },
+      { "dependsOn": "Q17", "value": "Não" }
+    ]
+  },
+  {
+    "id": "Q19",
+    "category": "Contábil",
+    "text": "A empresa possui controles internos para aprovar pagamentos e evitar despesas sem comprovação?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q20",
+    "category": "Contábil",
+    "text": "Existe revisão mensal de contas a pagar/receber com base em relatórios e extratos?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Às vezes", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q13", "value": "Mensal" }
+    ]
+  },
+  {
+    "id": "Q21",
+    "category": "Contábil",
+    "text": "A empresa tem documentação de contratos com clientes e fornecedores (assinados e organizados)?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q22",
+    "category": "Contábil",
+    "text": "A empresa mantém relatórios mensais para tomada de decisão (DRE, fluxo de caixa, indicadores)?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q13", "value": "Mensal" }
+    ]
+  },
+  {
+    "id": "Q23",
+    "category": "Jurídico",
+    "text": "A empresa já recebeu autuações/multas fiscais ou notificações formais nos últimos 24 meses?",
+    "options": [
+      { "label": "Não", "weight": 0 },
+      { "label": "Sim, uma", "weight": 10 },
+      { "label": "Sim, mais de uma", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q24",
+    "category": "Jurídico",
+    "text": "Existe passivo tributário conhecido (dívidas/parcelamentos) atualmente?",
+    "options": [
+      { "label": "Não possui", "weight": 0 },
+      { "label": "Sim, provisionado", "weight": 10 },
+      { "label": "Sim, sem provisão", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q25",
+    "category": "Trabalhista",
+    "text": "Existe registro de jornada/ponto para os colaboradores (se aplicável)?",
+    "options": [
+      { "label": "Sim, eletrônico/manual", "weight": 0 },
+      { "label": "Apenas alguns", "weight": 10 },
+      { "label": "Não há registro", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q26",
+    "category": "Trabalhista",
+    "text": "A empresa controla banco de horas e horas extras com critérios claros e documentados?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q25", "value": "Sim, eletrônico/manual" }
+    ]
+  },
+  {
+    "id": "Q27",
+    "category": "Trabalhista",
+    "text": "A empresa possui documentação de admissões/demissões organizada e atualizada?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q25", "value": "Sim, eletrônico/manual" }
+    ]
+  },
+  {
+    "id": "Q28",
+    "category": "Trabalhista",
+    "text": "Existe controle de férias, afastamentos e atestados de forma centralizada?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q25", "value": "Sim, eletrônico/manual" }
+    ]
+  },
+  {
+    "id": "Q29",
+    "category": "Trabalhista",
+    "text": "A empresa realiza conferência de folha de pagamento antes do fechamento?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Às vezes", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ]
+  },
+  {
+    "id": "Q30",
+    "category": "Trabalhista",
+    "text": "A empresa utiliza eSocial corretamente (eventos, rubricas, fechamentos) e revisa inconsistências?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q25", "value": "Sim, eletrônico/manual" }
+    ]
+  },
+  {
+    "id": "Q31",
+    "category": "Trabalhista",
+    "text": "Há política/documentos de segurança do trabalho (PGR/PCMSO) quando aplicável?",
+    "options": [
+      { "label": "Não se aplica", "weight": 0 },
+      { "label": "Sim", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q25", "value": "Sim, eletrônico/manual" }
+    ]
+  },
+  {
+    "id": "Q32",
+    "category": "Trabalhista",
+    "text": "A empresa já teve reclamatórias trabalhistas ou notificações do MTE nos últimos 24 meses?",
+    "options": [
+      { "label": "Não", "weight": 0 },
+      { "label": "Sim, uma", "weight": 10 },
+      { "label": "Sim, mais de uma", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q25", "value": "Sim, eletrônico/manual" }
+    ]
+  },
+  {
+    "id": "Q33",
+    "category": "Trabalhista",
+    "text": "A empresa controla benefícios (VA/VR/VT/Plano) com registros e critérios claros?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q25", "value": "Sim, eletrônico/manual" }
+    ]
+  },
+  {
+    "id": "Q34",
+    "category": "Trabalhista",
+    "text": "A empresa possui rotina de auditoria interna de obrigações trabalhistas (FGTS/INSS/guias)?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q25", "value": "Sim, eletrônico/manual" }
+    ]
+  },
+  {
+    "id": "Q35",
+    "category": "Jurídico",
+    "text": "A empresa já teve bloqueios/penhoras ou restrições por dívidas (PGFN/execução)?",
+    "options": [
+      { "label": "Não", "weight": 0 },
+      { "label": "Sim, resolvemos", "weight": 10 },
+      { "label": "Sim, ainda existe risco", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q24", "value": "Sim, provisionado" },
+      { "dependsOn": "Q24", "value": "Sim, sem provisão" }
+    ]
+  },
+  {
+    "id": "Q36",
+    "category": "Jurídico",
+    "text": "A empresa possui acompanhamento jurídico/contencioso para reduzir risco de autuações e execuções?",
+    "options": [
+      { "label": "Sim", "weight": 0 },
+      { "label": "Parcialmente", "weight": 10 },
+      { "label": "Não", "weight": 25 }
+    ],
+    "show_if": [
+      { "dependsOn": "Q24", "value": "Sim, sem provisão" }
+    ]
+  }
+]
